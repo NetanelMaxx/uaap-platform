@@ -1,0 +1,16 @@
+/* Base theming (light/dark controlled by Tailwind, not hacky CSS switches) */
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+}
+
+html.light {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+html.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+}
