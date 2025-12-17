@@ -23,12 +23,13 @@ function getTeamBySlug(slug: string): Team | undefined {
 }
 
 // Main Page Component
-export default function TeamProfilePage({
+export default async function TeamProfilePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const team = getTeamBySlug(params.slug);
+  const { slug } = await params;
+  const team = getTeamBySlug(slug);
   if (!team) {
     notFound(); // Redirect to a 404 page if team slug is invalid
   }

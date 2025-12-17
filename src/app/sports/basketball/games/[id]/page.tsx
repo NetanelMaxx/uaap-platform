@@ -22,8 +22,9 @@ function getTeamBySlug(slug: string): Team | undefined {
 }
 
 // Main Page Component
-export default function GameCenterPage({ params }: { params: { id: string } }) {
-  const game = SCHEDULE.find((g) => g.id === params.id);
+export default async function GameCenterPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const game = SCHEDULE.find((g) => g.id === id);
   if (!game) {
     notFound();
   }

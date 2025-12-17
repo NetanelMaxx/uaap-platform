@@ -53,9 +53,9 @@ export default function BasketballPage() {
     },
     {
       image: "/images/players/cj-austria.jpg",
-      title: "Top Player: John Doe",
+      title: "Top Player: Kevin Quiambao",
       subtitle: "Avg 22 PPG",
-      link: "/players/john-doe",
+      link: "/players/kevin-quiambao",
     },
     {
       image: "/images/teams/la-salle-bg.jpg",
@@ -68,23 +68,23 @@ export default function BasketballPage() {
   const whatsHotItems = [
     {
       image: "/images/players/cj-austria.jpg",
-      title: "Jane Smith",
+      title: "Kevin Quiambao's Stellar Performance",
       subtitle: "Scored 30 points last game",
-      link: "/players/john-doe",
+      link: "/players/kevin-quiambao",
       type: "player",
     },
     {
       image: "/images/teams/ateneo-bg.jpg",
       title: "ADMU vs UE Recap",
       subtitle: "Thrilling OT game highlights",
-      link: "/sports/basketball/news/admu-ue-recap",
+      link: "/sports/basketball/games/game-001",
       type: "article",
     },
     {
       image: "/images/teams/la-salle-bg.jpg",
       title: "La Salle",
       subtitle: "Winning streak continues",
-      link: "/sports/basketball/teams/la-salle",
+      link: "/sports/basketball/teams/dlsu-green-archers",
       type: "team",
     },
   ] as const;

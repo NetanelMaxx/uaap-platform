@@ -12,8 +12,9 @@ export async function generateStaticParams() {
 }
 
 // Main Page Component
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = ARTICLES[params.slug];
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = ARTICLES[slug];
 
   if (!article) {
     notFound(); // Redirect to a 404 page if article slug is invalid
