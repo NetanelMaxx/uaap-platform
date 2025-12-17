@@ -23,8 +23,9 @@ function getPlayerBySlug(slug: string): Player | undefined {
 }
 
 // Main Page Component
-export default function PlayerPage({ params }: { params: { slug: string } }) {
-  const player = getPlayerBySlug(params.slug);
+export default async function PlayerPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const player = getPlayerBySlug(slug);
 
   if (!player) {
     notFound(); // 404
